@@ -24,21 +24,6 @@ body{
     color: white;
 }
 
-#category{
-    grid-area: category;
-    background-color: seashell;
-}
-
-#content1{
-    grid-area: content1;
-    background-color: lightgray;
-}
-
-#content2{
-    grid-area: content2;
-    background-color: lightsteelblue;
-}
-
 #header-content{
     width: 60vw;
     display: grid;
@@ -105,34 +90,29 @@ body{
 }
 
 #login-btn{
-    width: 80px;
-    height: 30px;
-    border: none;
     background-color: white;
-    cursor: pointer;
     margin-right: 10px;
     margin-left: 10px;
 }
 
 #more-btn{
-    width: 80px;
-    height: 30px;
-    border: none;
     background-color: transparent;
-    cursor: pointer;
     color: white;
 }
 
 #cart-btn{
-    width: 80px;
-    height: 30px;
-    border: none;
     background-color: transparent;
-    cursor: pointer;
     color: white;
     display: flex;
     align-items: center;
     gap: 6px;
+}
+
+.btns{
+    width: 80px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
 }
 
 @media (max-width: 900px) {
@@ -176,4 +156,19 @@ body{
     #more-btn{
         display: none;
     }
+}
+
+#category{
+    grid-area: category;
+    background-color: seashell;
+}
+
+#content1{
+    grid-area: content1;
+    background-color: lightgray;
+}
+
+#content2{
+    grid-area: content2;
+    background-color: lightsteelblue;
 }
