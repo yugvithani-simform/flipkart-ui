@@ -11,7 +11,7 @@ body{
     height: 100%;
     display: grid;
     min-width: 0px;
-    grid-template-rows: 53px 105px 358px auto;
+    grid-template-rows: 53px 105px 390px auto;
     grid-template-areas:
     "header"
     "category"
@@ -224,10 +224,12 @@ body{
 
 #dod-header{
     margin: 10px;
+    padding-bottom: 10px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     max-height: 20%;
+    border-bottom: 1px solid lightgray;
 }
 
 #dod-header #left{
@@ -334,6 +336,10 @@ body{
 }
 
 @media (max-width: 600px) {
+    #dod-header{
+        padding-bottom: 0px;
+    }
+
     #dod-header #left{
         display: flex;
         flex-direction: column;
@@ -355,5 +361,121 @@ body{
 
 #content2{
     grid-area: content2;
-    background-color: lightsteelblue;
+    background-color: rgb(241, 241, 241);
+    padding: 10px 4% 10px;
+    display: flex;
+    min-height: 415px;
+}
+
+#hot-categories{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    flex-grow:1;
+    min-width: 0px;
+    overflow: auto;
+}
+
+#hot-categories-header{
+    margin: 10px;   
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 20%;
+}
+
+#hot-categories #left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#hot-categories #left h2{
+    margin: 3px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#hot-categories #left div{
+    font-size: 90%;
+    font-weight: lighter;
+    margin-left: 3px;
+}
+
+#hot-categories-header button{
+    width: 100px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #405fc5;
+    padding: 2px;
+    border-radius: 1px;
+    border-color: #405fc5;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hot-categories-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    flex-shrink: 1;
+    height: auto;
+    flex: 1;
+    font-family: sans-serif;
+    flex-wrap: wrap;
+}
+
+.hot-categories-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 10px;
+    cursor: pointer;
+    width: 170px;
+    flex-shrink: 0;
+}
+
+.hot-categories-img h4{
+    margin: 0px;
+}
+
+.hot-categories-img h5{
+    margin: 0px;
+    font-weight: normal;
+    color: green;
+}
+
+.hot-categories-img h6{
+    margin: 0px;
+    font-weight: normal;
+    font-size: 75%;
+}
+
+.hot-categories-img img{
+    width: auto;
+    object-fit: contain;
+    height: 120px;
+}
+
+@media (max-width:1033px){
+    #hot-categories-items{
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    #hot-categories-header #left h2{
+        font-size: 16px;
+    }
 }
