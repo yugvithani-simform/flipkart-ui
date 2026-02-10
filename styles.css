@@ -1,6 +1,8 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
-    width: 100vw;
-    height: 100vh;
     margin: 0px;
 }
 
@@ -8,7 +10,8 @@ body{
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-rows: 6vh 12vh 41vh 41vh;
+    min-width: 0px;
+    grid-template-rows: 53px 105px 358px auto;
     grid-template-areas:
     "header"
     "category"
@@ -163,7 +166,7 @@ body{
     background-color: white;
     display: flex;
     justify-content: center;
-    overflow: hidden;
+    overflow: auto;
 }
 
 #category-content{
@@ -195,7 +198,159 @@ body{
 
 #content1{
     grid-area: content1;
-    background-color: lightgray;
+    background-color: rgb(241, 241, 241);
+    padding: 20px 4% 10px;
+    display: flex;
+    min-width: 0px;
+}
+
+#dod-and-ad{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+#dod{
+    margin-right: 5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    scroll-behavior: smooth;
+    flex-grow: 1;
+    min-width: 0px;
+    overflow: hidden;
+}
+
+#dod-header{
+    margin: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-height: 20%;
+}
+
+#dod-header #left{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#dod-header #left h2{
+    margin: 3px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#dod-header #left div{
+    font-size: 120%;
+    font-weight: lighter;
+}
+
+#dod-header button{
+    width: 100px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #405fc5;
+    padding: 2px;
+    border-radius: 1px;
+    border-color: #405fc5;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#dod-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    flex-shrink: 1;
+    height: auto;
+    flex: 1;
+    font-family: sans-serif;
+}
+
+.dod-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 0px 10px;
+    cursor: pointer;
+    width: 170px;
+    flex-shrink: 0;
+}
+
+.dod-img h4{
+    margin: 0px;
+}
+
+.dod-img h5{
+    margin: 0px;
+    font-weight: normal;
+    color: green;
+}
+
+.dod-img h6{
+    margin: 0px;
+    font-weight: normal;
+    font-size: 75%;
+}
+
+.dod-img img{
+    width: auto;
+    height: 120px;
+}
+
+#ad{
+    width: 220px;
+    flex-shrink: 0;
+    height: 100%;
+    margin-left: 5px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ad img{
+    width: 97%;
+    height: 98%;
+    cursor: pointer;
+}
+
+@media (max-width: 1200px){
+    #dod{
+        min-width: 100%;
+    }
+    #ad{
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    #dod-header #left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 3px;
+    }
+
+    #dod-header #left h2{
+        font-size: 100%;
+    }
+
+    #dod-header #left div{
+        font-size: 80%;
+        font-weight: lighter;
+        margin-left: 3px;
+    }
 }
 
 #content2{
