@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link
         rel="stylesheet"
@@ -35,10 +35,18 @@
                     <button id="login-btn" class="btns">
                         Login
                     </button>
-                    <button id="more-btn" class="btns">
-                        More
-                        <i class="fa-solid fa-caret-down"></i>
-                    </button>
+                    <div class="dropdown">
+                        <button id="more-btn" class="btns">
+                            More
+                            <i class="fa-solid fa-caret-down"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Option 1</a></li>
+                            <li><a href="#">Option 2</a></li>
+                            <li><a href="#">Option 3</a></li>
+                            <li><a href="#">Option 4</a></li>
+                        </ul>
+                    </div>
                     <button id="cart-btn" class="btns">
                         <i class="fa-solid fa-cart-shopping"></i>
                         <div id="cart-content">Cart</div>
